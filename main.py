@@ -56,9 +56,13 @@ def scrape_stock_mentions(twitter_accounts, interval_minutes):
 
 
 def main():
-    twitter_accounts = ["Mr_Derivatives", "warrior_0719", "ChartingProdigy", "allstarcharts", "yuriymatso",
-                        "TriggerTrades", "AdamMancini4 ", "CordovaTrades", "Barchart",
-                        "RoyLMattox"]
+    twitter_accounts = []
+    for i in range(10):
+        account = input(f"Enter Twitter account {i+1}: ")
+        twitter_accounts.append(account)
+    # twitter_accounts = ["Mr_Derivatives", "warrior_0719", "ChartingProdigy", "allstarcharts", "yuriymatso",
+    #                     "TriggerTrades", "AdamMancini4 ", "CordovaTrades", "Barchart",
+    #                     "RoyLMattox"]
     interval_minutes = 15
     scrape_stock_mentions(twitter_accounts, interval_minutes)
 
